@@ -1,5 +1,12 @@
 # Deep Dream
 
+<p>
+    <a href="https://cloud.docker.com/u/deepaiorg/repository/docker/deepaiorg/deepdream">
+        <img src='https://img.shields.io/docker/cloud/automated/deepaiorg/deepdream.svg?style=plastic' />
+        <img src='https://img.shields.io/docker/cloud/build/deepaiorg/deepdream.svg' />
+    </a>
+</p>
+
 This model has been integrated with [ai_integration](https://github.com/deepai-org/ai_integration/blob/master/README.md) for seamless portability across hosting providers.
 
 # Overview
