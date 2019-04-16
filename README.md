@@ -11,9 +11,32 @@ This model has been integrated with [ai_integration](https://github.com/deepai-o
 
 # Overview
 
-Implementation of Deep Dream
+Implementation of Deep Dream.
+
+Nvidia-Docker is required to run this image.
 
 # For details see [Deep Dream](https://deepai.org/machine-learning-model/deepdream) on [Deep AI](https://deepai.org)
+
+# Quick Start
+
+docker pull deepaiorg/deepdream
+
+### HTTP
+```bash
+nvidia-docker run --rm -it -e MODE=http -p 5000:5000 deepaiorg/deepdream
+```
+Open your browser to localhost:5000 (or the correct IP address)
+
+### Command Line
+
+Save your image as content.jpg in the current directory.
+```bash
+nvidia-docker run --rm -it -v `pwd`:/shared -e MODE=command_line deepaiorg/deepdream --image /shared/content.jpg --output /shared/output.jpg
+```
+# Docker build
+```bash
+docker build -t deepdream .
+```
 
 # Author Credit
 
