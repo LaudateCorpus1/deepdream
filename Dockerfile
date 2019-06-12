@@ -12,19 +12,17 @@ RUN python get-pip.py; hash -r
 RUN pip install \
   nose \
   numpy \
-  scipy
+  scipy \
+  Pillow \
+  ai-integration==1.0.7
 
 # create directory to house model, code & images
 RUN mkdir /root/caffe/deepdream
 
 RUN ./scripts/download_model_binary.py models/bvlc_googlenet/
 
-
 # Fix for boto3 conflicting with installed urllib3
 RUN pip install --ignore-installed urllib3==1.24
-
-RUN pip install Pillow ai-integration==1.0.6
-
 
 COPY model_src model_src
 WORKDIR model_src
