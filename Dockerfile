@@ -14,7 +14,7 @@ RUN pip install \
   numpy \
   scipy \
   Pillow \
-  ai-integration==1.0.7
+  ai-integration==1.0.11
 
 # create directory to house model, code & images
 RUN mkdir /root/caffe/deepdream
